@@ -74,12 +74,15 @@ function out() {
 console.debug('Press F4 to start timer.\nPress F2 to stop the timer.\nPress F7 to clear the text.');
 
 function att() {
-	let p = document.createElement('p');
+	var p = document.createElement('p');
 	p.id = 'at_test';
 
 	if (!$('#at_test').length) {
 		if (tStarted === 0) {
 			alert('Press F4 to start typing.\nView console for further information!');
+			while (a.length > 0) {
+				a.pop();
+			}
 			a.push('F4 to start typing!\nF2 to stop typing!\nF7 to clear this box!');
 		}
 		$('body').append(p);
